@@ -10,21 +10,23 @@ axios.defaults.baseURL = 'https://hacker-news.firebaseio.com/v0';
 
 async function getValue(start, end) {
   try {
-    const { data: dataId } = await axios.get('/newstories.json');
+    const response = await axios.get('/newstories.json');
+    const dataId = response.data;
+
     const articleIds = dataId.slice(start, end);
 
-    const articlePromises = articleIds.map(id => axios.get(`/item/${id}.json`));
-    const articleResponses = await Promise.all(articlePromises);
+    for (let id of articleIds) {
+      const articleResponse = await axios.get(`/item/${id}.json`);
+      const article = articleResponse.data;
 
-    // Export data to cards
-    articleResponses
-      .map(response => response.data) 
-      .filter(article => article !== null)
-      .forEach(article => createCards(article?.title, article?.url, article?.time, mainDiv));
+      if (article) {
+        createCards(article.title, article.url, article.time, mainDiv);
+      }
+    }
   } catch (error) {
-    console.error("Errore:", error.message);
+    console.error("Error:", error.message);
     const errorMessage = document.createElement('div');
-    errorMessage.textContent = `Si è verificato un errore: ${error.message}`;
+    errorMessage.textContent = `An error occurred: ${error.message}`;
     document.body.appendChild(errorMessage);
   }
 }
@@ -37,3 +39,5 @@ btn.addEventListener('click', () => {
   start += newsCounter;
   getValue(start, start + newsCounter);
 });
+
+
