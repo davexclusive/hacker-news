@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"  dir="ltr">
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <meta charset='UTF-8'>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.min.css"
+rel="stylesheet"
+/>
+<!-- Axios-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title> Hacker News </title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light sticky-top navbar-style">
+  <div class="container-fluid d-flex justify-content-center align-items-center position-relative">
+    
+    <!-- Logo -->
+    <a class="navbar-brand" href="https://davideursida.github.io/hackernews/">
+      <i class="fab fa-hacker-news fa-2x me-2"></i>
+      <small>Hacker News</small>
+    </a>
+  </div>
+</nav>
+
+<!-- Header -->
+  <div class="container-md mt-5">
+    <div class="row mb-5>">
+      <div class="col">
+        <div class="text-center header-card">
+            <h3>
+              Hacker News is a community-driven platform that shares the latest news, ideas, and innovations in technology, startups, and science. 
+              Stay informed with curated stories and discussions shaping the future.
+            </h3>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<!-- Cards -->
+  <div class="row mt-5 justify-content-center m-5" id="divRow"></div>
+
+<!-- Button -->
+
+<div class="row">
+  <div class="d-flex justify-content-center aling-items-center">
+    <button type="button" class="btn btn-outline-dark btn-rounded  mt-3" data-mdb-ripple-init data-mdb-ripple-color="dark" id="btn">Load more</button>
+  </div>
+</div>
+
+<footer class="text-center bg-body-tertiary mt-5">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-body" href="https://davideursida.com/">davideursida.it</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<script type="module" src="js/index.js"></script>
+
+</body>
+
+</html>

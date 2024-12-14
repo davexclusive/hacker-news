@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar-style {
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+}
+
+.header-card {
+  border: 1px;
+  border-radius: 30px;
+  background-color: #ECECEE ; 
+  padding: 30px;
+}
+
+.card-design {
+  color: #2DD4BF;
+  background-color: rgba(45, 212, 191, 0.1);
+  border-radius: 30px;
+  padding: 30px;
+};
+
+
+.button-mod {
+  background-color: #2DD4BF !important;
+  color: #2DD4BF !important;
+};
+
+
